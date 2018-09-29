@@ -1,0 +1,32 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[uspInsertIntoTable]",
+					"storedProcedureParameters": {
+						"Descr": {
+							"value": "'DataFactoryInert'",
+							"type": "string"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedService1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

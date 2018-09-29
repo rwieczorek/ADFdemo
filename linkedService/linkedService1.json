@@ -1,0 +1,17 @@
+{
+	"name": "linkedService1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"type": "AzureSqlDW",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "azuresqldwrobDemoDBconnString"
+			}
+		}
+	}
+}
