@@ -16,7 +16,7 @@
 					"storedProcedureName": "[dbo].[uspInsertIntoTable]",
 					"storedProcedureParameters": {
 						"Descr": {
-							"value": "'DataFactoryInert'",
+							"value": "'DataFactoryInsert'",
 							"type": "string"
 						}
 					}
